@@ -1,5 +1,6 @@
 version: 0.2
-pre_build:
+phases:
+  pre_build:
     commands:
       - docker pull katalonstudio/katalon
   build:
@@ -9,6 +10,6 @@ artifacts:
   files:
     - report/*
 reports: #New
-  KatalonTestReports: # CodeBuild will create a report group called "KatalonTestReport".
+  KatalonTestReports: # CodeBuild will create a report group called "KatalonTetReport".
     files: #Store all of the files
       - 'report/JUnit_Report.xml'
