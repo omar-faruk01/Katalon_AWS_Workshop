@@ -8,7 +8,7 @@ phases:
       - docker pull katalonstudio/katalon
   build:
     commands:
-      - docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -apiKey=9b26b1f9-8b64-4c42-b5d9-1583bf3ae781 -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/Cura Healthcare"
+      -retry=0 -testSuitePath="Test Suites/Cura Healthcare" -apiKey="9b26b1f9-8b64-4c42-b5d9-1583bf3ae781" -browserType="Chrome" -executionProfile="default" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true -webui.autoUpdateDrivers=true
 artifacts:
   files:
     - report/*
