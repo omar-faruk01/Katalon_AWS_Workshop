@@ -1,0 +1,18 @@
+version: 0.2
+env:
+  parameter-store:
+   KATALON_API_KEY: 9b26b1f9-8b64-4c42-b5d9-1583bf3ae781
+phases:
+  pre_build:
+    commands:
+      - docker pull katalonstudio/katalon
+  build:
+    commands:
+      - docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -apiKey=$KATALON_API_KEY -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/Cura Healthcare"
+artifacts:
+  files:
+    - report/*
+reports: #New
+  KatalonTestReports: # CodeBuild will create a report group called "KatalonTestReport".
+    files: #Store all of the files
+      - 'report/JUnit_Report.xml'
