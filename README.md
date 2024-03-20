@@ -18,11 +18,18 @@ https://katalon.com/download
 
 Instructions
 
+Step 1: 
+
 Step 2: Go to AWS Codebuild and create a New Project
  - Give the project a name
- - Select "GitHub Repository" as the source
- - Authenticate GitHub with your personal access token (Or OAuth if supported)
- - Select "Public Repository" and provide this repository url: https://github.com/giaesposito/Katalon_AWS_Workshop.git
- - In the buildspec section, select 'Use a buildspec file'
+ - In the 'Source' section, select "GitHub Repository" as the source
+    - Authenticate GitHub with your personal access token (Or OAuth if supported)
+    - Select "Public Repository" and provide this repository url: https://github.com/giaesposito/Katalon_AWS_Workshop.git
+        * Alternatively, you can fork this repository, and choose 'Repository in my GitHub Account' to select your own version if you wish to make            updates.
+ - In the 'Environment' section, click the 'Additional Configuration' dropdown
+    - Click 'Create Parameter'
+    - Enter 'KATALON_API_KEY' as the name and provide your API Key which you retrieved earlier as the value and click 'Create Parameter'
+    - Enter 'KATALON_API_KEY' in the name column next to the newly created paramter (this is the name of the environment variable)
+ - In the 'Buildspec' section, select 'Use a buildspec file' (this file is included and pre-populated in this Git Repository)
 
 
