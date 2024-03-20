@@ -26,15 +26,23 @@ https://katalon.com/download
  - Select 'Clone Git Project'
  - Enter the repository URL from the forked repository
  - Authenticate with your email and personal access token (instead of a password), and be sure to check 'Save Authentication'
- - Click 'Next'
+ - Click 'Next', then 'Next' again, and 'Finish' to complete cloning
 
-**Step 3: Retrieve your Katalon API Key**
+**Step 3: Update the Katalon Project and commit the changes**
+ - For this workshop, we will walk through using the 'Katalon Recorder' to create a new test case
+ - Add the new test case to a test suite
+ - On the git icon, click 'commit'
+    - Move all items from 'Unstaged Changes' to 'Staged Changes'
+    - Write a commit message describing the change
+    - Click 'Commit and Push'
+
+**Step 4: Retrieve your Katalon API Key**
  - Login to testops.katalon.io using your Katalon account
  - Navigate to https://testops.katalon.io/user/settings and select 'Katalon API Key' from the left side menu
  - Copy the default key (or create a new key and copy it)
     - The API Key will be used in Step 2 to configure your AWS Codebuild project
  
-**Step 4: Go to AWS Codebuild and create a New Project**
+**Step 5: Go to AWS Codebuild and create a New Project**
  - Give the project a name
  - In the 'Source' section, select "GitHub Repository" as the source
     - Authenticate GitHub with your personal access token (Or OAuth if supported)
@@ -47,10 +55,15 @@ https://katalon.com/download
  - In the 'Buildspec' section, select 'Use a buildspec file' (this file is included and pre-populated in this Git Repository)
  - Click 'Create Build Project'
 
-**Step 5: Grant Permissions**
+**Step 6: Grant Permissions**
  - Navigate to https://console.aws.amazon.com/iam/ 
  - On the left side menu, select 'Roles'
  - Select the role associated with your codebuild project name
  - Click on the 'Add Permissions' dropdown and select 'Attach Policies'
  - Search for 'AmazonSSMReadOnlyAccess'
  - Select the checkbox and click 'Add Permissions'
+
+**Step 7: Build your Project**
+ - In AWS Codebuild, select your new project in 'Build Projects'
+ - Click on 'Start Build' to build your project
+ - The tests will execute and you will be able to see the logs
