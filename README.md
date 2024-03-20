@@ -2,7 +2,7 @@
 
 This repository is for the testing portion of the workshop for AWS by Katalon. You can clone this repository into Katalon to modify and run the tests.
 
-Prerequisites:
+**Prerequisites**:
 
 1. A GitHub Account and a GitHub personal access token (Make sure to store this token somewhere secure, as it will be used in the workshop)
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
@@ -16,15 +16,15 @@ https://login.katalon.com/realms/katalon/login-actions/registration?client_id=ka
 https://katalon.com/download
 
 
-Instructions
+**Instructions**
 
-Step 1: Retrieve your Katalon API Key
+**Step 1: Retrieve your Katalon API Key**
  - Login to testops.katalon.io using your Katalon account
  - Navigate to https://testops.katalon.io/user/settings and select 'Katalon API Key' from the left side menu
  - Copy the default key (or create a new key and copy it)
     - The API Key will be used in Step 2 to configure your AWS Codebuild project
  
-Step 2: Go to AWS Codebuild and create a New Project
+**Step 2: Go to AWS Codebuild and create a New Project**
  - Give the project a name
  - In the 'Source' section, select "GitHub Repository" as the source
     - Authenticate GitHub with your personal access token (Or OAuth if supported)
@@ -37,7 +37,7 @@ Step 2: Go to AWS Codebuild and create a New Project
  - In the 'Buildspec' section, select 'Use a buildspec file' (this file is included and pre-populated in this Git Repository)
  - Click 'Create Build Project'
 
-Step 3: Grant Permissions
+**Step 3: Grant Permissions**
  - Navigate to https://console.aws.amazon.com/iam/ 
  - On the left side menu, select 'Roles'
  - Select the role associated with your codebuild project name
