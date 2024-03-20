@@ -22,6 +22,7 @@ Step 2: Go to AWS Codebuild and create a New Project
  - Give the project a name
  - Select "GitHub Repository" as the source
  - Authenticate GitHub with your personal access token (Or OAuth if supported)
- - Select "Public Repository" and provide this repository url
+ - Select "Public Repository" and provide this repository url: https://github.com/giaesposito/Katalon_AWS_Workshop.git
+ - In the buildspec section, select 'Use a buildspec file'
 
-Step 2: 
+
