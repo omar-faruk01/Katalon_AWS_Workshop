@@ -46,8 +46,7 @@ https://katalon.com/download
  - Give the project a name
  - In the 'Source' section, select "GitHub Repository" as the source
     - Authenticate GitHub with your personal access token (Or OAuth if supported)
-    - Select "Public Repository" and provide this repository url: https://github.com/giaesposito/Katalon_AWS_Workshop.git
-        * Alternatively, you can fork this repository, and choose 'Repository in my GitHub Account' to select your own version if you wish to make            updates.
+    - Choose 'Repository in my GitHub Account' to select your forked repository.
  - In the 'Environment' section, click the 'Additional Configuration' dropdown
     - Click 'Create Parameter'
     - Enter 'KATALON_API_KEY' as the name and provide your API Key which you retrieved earlier as the value and click 'Create Parameter'
