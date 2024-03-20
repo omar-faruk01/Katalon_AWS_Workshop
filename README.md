@@ -20,18 +20,19 @@ https://katalon.com/download
 
 **Step 1: Fork this GitHub Repository**
  - https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
-   
-**Step 2: Retrieve your Katalon API Key**
+  
+**Step 2: Clone the Katalon Studio Project from the Forked Repository**
+ - Activate Katalon Studio using your Katalon Account (Select Log in from Browser)
+ - Select 'Clone Git Project'
+ - Enter the repository URL from the forked repository
+ - Authenticate with your email and personal access token (instead of a password), and be sure to check 'Save Authentication'
+ - Click 'Next'
+
+**Step 3: Retrieve your Katalon API Key**
  - Login to testops.katalon.io using your Katalon account
  - Navigate to https://testops.katalon.io/user/settings and select 'Katalon API Key' from the left side menu
  - Copy the default key (or create a new key and copy it)
     - The API Key will be used in Step 2 to configure your AWS Codebuild project
-  
-**Step 3: Clone the Katalon Studio Project from the Forked Repository**
- - Activate Katalon Studio using your Katalon Account (Select Log in from Browser)
- - Select 'Clone Git Project'
- - Enter the repository URL from the forked repository
- - Authenticate with your email and personal access token (instead of a password)
  
 **Step 4: Go to AWS Codebuild and create a New Project**
  - Give the project a name
