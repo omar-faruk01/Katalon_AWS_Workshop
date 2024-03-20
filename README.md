@@ -25,7 +25,7 @@ https://katalon.com/download
     - The API Key will be used in Step 2 to configure your AWS Codebuild project
 
 **Step 2: Fork this GitHub Repository**
- - 
+ - https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo 
  
 **Step 3: Go to AWS Codebuild and create a New Project**
  - Give the project a name
