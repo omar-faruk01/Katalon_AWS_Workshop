@@ -2,6 +2,8 @@
 
 This repository is for the testing portion of the workshop for AWS by Katalon. You can clone this repository into Katalon to modify and run the tests.
 
+The steps below contain instructions for creating a testing build through AWS Codebuild. The Codebuild project can be added as part of a pipeline, and triggered to run tests automatically on application deployments.
+
 **Prerequisites**:
 
 1. A GitHub Account and a GitHub personal access token (Make sure to store this token somewhere secure, as it will be used in the workshop)
